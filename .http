@@ -8,6 +8,6 @@ POST http://localhost:3000/students
 content-type: application/json
 
 {
-    "student_id": "S001",
-    "name": "Comment"
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
 }

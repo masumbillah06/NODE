@@ -19,7 +19,8 @@ export const singleStudent = (req, res) => {
 }
 
 export const createStudent = (req, res) => {
-    console.log(req)
-    return res.status(200)
+    console.log("req confirm")
+    console.log(req.body)
+    return res.status(200).send('test')
 }
 

@@ -6,6 +6,6 @@ import { allStudent, singleStudent, createStudent } from './../controller/studen
 router.get('/students', allStudent);
 router.get('/students/:id', singleStudent);
 
-router.post('students', createStudent)
+router.post('/students', createStudent)
 
 export default router
