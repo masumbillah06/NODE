@@ -20,7 +20,7 @@ export const singleStudent = (req, res) => {
 
 export const createStudent = (req, res) => {
 	const query = `INSERT INTO Students (student_id, name, email, phone, batch_no, address) VALUES ('${req.body.student_id}', '${req.body.name}', '${req.body.email}', '${req.body.phone}', '${req.body.batch_no}', '${req.body.address}');`;
-
+    console.log(query);
 	db.query(query, (err, data) => {
 		if (err) return res.status(500).json(err);
 

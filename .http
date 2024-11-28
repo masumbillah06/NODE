@@ -16,5 +16,5 @@ content-type: application/json
     "email": "masume@example.com",
     "phone": "78341243356",
     "batch_no": "cse123",
-    "address": "Valhalla"
+    "address": "Valhalla"
 }
