@@ -4,20 +4,34 @@ GET http://localhost:3000
 GET http://localhost:3000/students
 
 ###
-GET http://localhost:3000/students/S052
-
+GET http://localhost:3000/courses
 
 ###
-GET http://localhost:3000/courses
+GET http://localhost:3000/courses/C001
+
 ###
 POST http://localhost:3000/students
 content-type: application/json
 
 {
-    "student_id": "S051",
-    "name": "Masum -2",
-    "email": "masume@example.com",
-    "phone": "78341243356",
+    "student_id": "S052",
+    "name": "Masum-2",
+    "email": "masum@example.com",
+    "phone": "6969696969",
     "batch_no": "cse123",
     "address": "Valhalla"
 }
+
+###
+POST http://localhost:3000/courses
+content-type: application/json
+
+{
+    "course_id": "C016",
+    "course_name": "Introduction to Fishing",
+    "course_description": "Learn the basics of Fishing using Fishing Rod.",
+    "credits": 4
+}
+
+###
+DELETE http://localhost:3000/courses/C016
