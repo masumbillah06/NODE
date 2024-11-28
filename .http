@@ -4,7 +4,7 @@ GET http://localhost:3000
 GET http://localhost:3000/students
 
 ###
-GET http://localhost:3000/students/S052
+GET http://localhost:3000/students/S051
 
 ###
 POST http://localhost:3000/students
