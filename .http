@@ -4,17 +4,13 @@ GET http://localhost:3000
 GET http://localhost:3000/students
 
 ###
-GET http://localhost:3000/students/S051
+GET http://localhost:3000/students/S052
 
 ###
 POST http://localhost:3000/students
 content-type: application/json
 
 {
-    "student_id": "S051",
-    "name": "Masum -2",
-    "email": "masume@example.com",
-    "phone": "78341243356",
-    "batch_no": "cse123",
-    "address": "Valhalla"
-  }
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
