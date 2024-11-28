@@ -4,9 +4,6 @@ GET http://localhost:3000
 GET http://localhost:3000/students
 
 ###
-GET http://localhost:3000/students/S052
-
-###
 POST http://localhost:3000/students
 content-type: application/json
 
