@@ -1,32 +1,26 @@
-import db from './../dbconnect.js';
+import db from './../dbconnect.js'
 
-export const allStudent = (req, res) => {
-	db.query('SELECT * FROM `students`;', (err, data) => {
-		if (err) return res.status(500).json(err);
-
-		return res.status(200).json(data);
-	});
-};
+export const  allStudent = (req, res) => {
+    db.query("SELECT * FROM `students`;", (err, data) => {
+        if (err) return res.status(500).json(err);
+        console.log(data);
+        return res.status(200).json(data);
+    });
+}
 
 export const singleStudent = (req, res) => {
-	const query = `SELECT * FROM students WHERE student_id = '${req.params.id}';`;
-
-	db.query(query, (err, data) => {
-		if (err) return res.status(500).json(err);
-
-		return res.status(200).json(data);
-	});
-};
+    const query = `SELECT * FROM students WHERE student_id = '${req.params.id}';`;
+    console.log(query);
+    db.query(query, (err, data) => {
+        if (err) return res.status(500).json(err);
+        console.log(data);
+        return res.status(200).json(data);
+    });
+}
 
 export const createStudent = (req, res) => {
-	const query = `INSERT INTO Students (student_id, name, email, phone, batch_no, address) VALUES ('${req.body.student_id}', '${req.body.name}', '${req.body.email}', '${req.body.phone}', '${req.body.batch_no}', '${req.body.address}');`;
+    console.log("req confirm")
+    console.log(req.body)
+    return res.status(200).send('test')
+}
 
-	db.query(query, (err, data) => {
-		if (err) return res.status(500).json(err);
-
-		return res.status(201).json(req.body);
-	});
-};
-
-// INSERT INTO Students (student_id, name, email, phone, batch_no, address) VALUES
-//('S001', 'Alice Johnson', 'alice.johnson@example.com', '1234567890', 'B01', '123 Maple St, Cityville');
