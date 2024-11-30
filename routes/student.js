@@ -5,7 +5,7 @@ import { allStudent, singleStudent, createStudent, deleteAStudent, updateStudent
 
 router.get('/students', allStudent);
 router.get('/students/:id', singleStudent);
-router.post('/students', createStudent)
+router.post('/students', createStudent);
 router.delete('/students/:id', deleteAStudent);
 router.put('/students/:id', updateStudent);
 

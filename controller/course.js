@@ -1,4 +1,4 @@
-import db from './../dbconnect.js'
+import db from './../dbconnect.js';
 
 //=================================================
 // Shows all courses

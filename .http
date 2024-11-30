@@ -77,3 +77,24 @@ Content-Type: application/json
     "address": "Dhaka, Bangladesh",
     "student_id": "S017"
 }
+
+
+#=======================Registration Section==================
+#=============================================================
+
+### Fetch All Registered Courses for a Student
+GET http://localhost:3000/registration/S017
+Content-Type: application/json
+
+### Assign a Course to a Student
+POST http://localhost:3000/registration/S016
+Content-Type: application/json
+
+{
+    "student_id": "S016", 
+    "course_id": "C014"
+}
+
+
+
+

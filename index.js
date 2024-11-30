@@ -6,6 +6,7 @@ const port = 3000;
 
 import courseRoute from './routes/course.js';
 import studentRoute from './routes/student.js';
+import registrationRoute from './routes/registration.js';
 
 
 //== testing ================== routes ===========
@@ -24,6 +25,9 @@ app.use('/', studentRoute);
 
 //courses section
 app.use('/', courseRoute);
+
+// Registrations section
+app.use('/', registrationRoute);
 
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
