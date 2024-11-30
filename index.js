@@ -7,6 +7,7 @@ const port = 3000;
 import courseRoute from './routes/course.js';
 import studentRoute from './routes/student.js';
 
+
 //== testing ================== routes ===========
 app.get('/', (req, res) => {
 	res.send('HI :)!');
@@ -16,8 +17,8 @@ app.get('/test', (req, res) => {
 	res.send('For testing purpose!');
 });
 
-//== testing ================== routes ===========
 
+//== testing ================== routes ===========
 //Studnets section
 app.use('/', studentRoute);
 

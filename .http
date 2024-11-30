@@ -6,20 +6,28 @@ GET http://localhost:3000/students
 ###
 GET http://localhost:3000/courses
 
+
+#=========================Single info=======================
+#===========================================================
+###
+GET http://localhost:3000/students/S017
 ###
 GET http://localhost:3000/courses/C001
 
+
+#=========================Add Section=======================
+#===========================================================
 ###
 POST http://localhost:3000/students
 content-type: application/json
 
 {
-    "student_id": "S052",
-    "name": "Masum-2",
-    "email": "masum@example.com",
-    "phone": "6969696969",
-    "batch_no": "cse123",
-    "address": "Valhalla"
+    "student_id": "S017",
+    "name": "AFM Shahriar Rahi",
+    "email": "rahi@example.com",
+    "phone": "01774105414",
+    "batch_no": "B2022",
+    "address": "Dhaka, Bangladesh"
 }
 
 ###
@@ -33,5 +41,39 @@ content-type: application/json
     "credits": 4
 }
 
+
+#=========================Delete Section====================
+#===========================================================
 ###
 DELETE http://localhost:3000/courses/C016
+###
+DELETE http://localhost:3000/students/S017
+
+
+#=========================Update Section====================
+#===========================================================
+###
+PUT http://localhost:3000/students/S017
+Content-Type: application/json
+
+{
+    "name": "AFM Shahriar Rahi",
+    "email": "rahi@example.com",
+    "phone": "01774105414",
+    "batch_no": "B2622",
+    "address": "Sirajganj, Bangladesh",
+    "student_id": "S017"
+}
+
+###
+PUT http://localhost:3000/students/S017
+Content-Type: application/json
+
+{
+    "name": "AFM Shahriar Rahi",
+    "email": "rahi@example.com",
+    "phone": "01774105414",
+    "batch_no": "B2022",
+    "address": "Dhaka, Bangladesh",
+    "student_id": "S017"
+}
