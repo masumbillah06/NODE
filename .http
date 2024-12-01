@@ -83,7 +83,7 @@ Content-Type: application/json
 #=============================================================
 
 ### Fetch All Registered Courses for a Student
-GET http://localhost:3000/registration/S017
+GET http://localhost:3000/registration/S016
 Content-Type: application/json
 
 ### Assign a Course to a Student
@@ -92,8 +92,13 @@ Content-Type: application/json
 
 {
     "student_id": "S016", 
-    "course_id": "C014"
+    "course_id": "C015"
 }
+
+### Delete a registration for a specific student and course
+DELETE http://localhost:3000/registrations/S016/C014
+Content-Type: application/json
+
 
 
 

@@ -53,3 +53,29 @@ export const AssignCourse = (req, res) => {
         });
     });
 };
+
+
+//============================================================================================
+// Deleting part
+
+export const deleteRegistration = (req, res) => {
+    const { student_id, course_id } = req.params;
+
+    const query = `
+        DELETE FROM Registrations
+        WHERE student_id = ? AND course_id = ?;
+    `;
+
+    db.query(query, [student_id, course_id], (err, results) => {
+        if (err) {
+            console.error('Error deleting registration:', err);
+            return res.status(500).json({ error: 'Database error', details: err });
+        }
+
+        if (results.affectedRows === 0) {
+            return res.status(404).json({ message: 'No registration found for the specified student and course.' });
+        }
+
+        return res.status(200).json({ message: 'Registration successfully deleted.' });
+    });
+};
