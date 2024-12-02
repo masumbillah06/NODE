@@ -1,11 +1,7 @@
-GET http://localhost:3000
-
-###
 GET http://localhost:3000/students
 
 ###
 GET http://localhost:3000/courses
-
 
 #=========================Single info=======================
 #===========================================================
@@ -82,12 +78,16 @@ Content-Type: application/json
 #=======================Registration Section==================
 #=============================================================
 
+###
+GET http://localhost:3000/registrations
+Content-Type: application/json
+
 ### Fetch All Registered Courses for a Student
-GET http://localhost:3000/registration/S016
+GET http://localhost:3000/registrations/S017
 Content-Type: application/json
 
 ### Assign a Course to a Student
-POST http://localhost:3000/registration/S016
+POST http://localhost:3000/registrations/S016
 Content-Type: application/json
 
 {
@@ -98,8 +98,4 @@ Content-Type: application/json
 ### Delete a registration for a specific student and course
 DELETE http://localhost:3000/registrations/S016/C014
 Content-Type: application/json
-
-
-
-
 

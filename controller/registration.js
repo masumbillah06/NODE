@@ -2,6 +2,32 @@ import db from './../dbconnect.js';
 import courseRegistered from './../utils/courseRegistered.js';
 
 // ===============================================================================
+// All Registrations in the table
+export const allRegistrations = (req, res) => {
+	const query = `
+        SELECT * FROM registrations;
+    `;
+
+	db.query(query, (err, results) => {
+		if (err) {
+			console.error('Error fetching registrations:', err);
+			return res
+				.status(500)
+				.json({ error: 'Database error', details: err });
+		}
+
+		if (results.length === 0) {
+			return res
+				.status(404)
+				.json({ message: 'No courses found.' });
+		}
+
+		return res.status(200).json({ registration: results });
+	});
+};
+
+
+// ===============================================================================
 // See all courses that a student has registered in
 export const allRegisteredCourses = (req, res) => {
 	const { student_id } = req.params;
@@ -30,6 +56,7 @@ export const allRegisteredCourses = (req, res) => {
 		return res.status(200).json({ courses: results });
 	});
 };
+
 
 // ================================================================================
 // Assign a Course to a Student
@@ -77,9 +104,9 @@ export const AssignCourse = async (req, res) => {
 	}
 };
 
+
 //============================================================================================
 // Deleting part
-
 export const deleteRegistration = (req, res) => {
 	const { student_id, course_id } = req.params;
 
