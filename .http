@@ -8,7 +8,7 @@ GET http://localhost:3000/courses
 ###
 GET http://localhost:3000/students/S017
 ###
-GET http://localhost:3000/courses/C001
+GET http://localhost:3000/courses/C016
 
 
 #=========================Add Section=======================
@@ -41,9 +41,9 @@ content-type: application/json
 #=========================Delete Section====================
 #===========================================================
 ###
-DELETE http://localhost:3000/courses/C016
+DELETE http://localhost:3000/courses/C015
 ###
-DELETE http://localhost:3000/students/S017
+DELETE http://localhost:3000/students/S016
 
 
 #=========================Update Section====================
@@ -87,7 +87,7 @@ GET http://localhost:3000/registrations/S017
 Content-Type: application/json
 
 ### Assign a Course to a Student
-POST http://localhost:3000/registrations/S016
+POST http://localhost:3000/registrations
 Content-Type: application/json
 
 {
@@ -96,6 +96,6 @@ Content-Type: application/json
 }
 
 ### Delete a registration for a specific student and course
-DELETE http://localhost:3000/registrations/S016/C014
+DELETE http://localhost:3000/registrations/S017/C016
 Content-Type: application/json
 

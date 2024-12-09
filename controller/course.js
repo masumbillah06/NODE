@@ -43,7 +43,7 @@ export const deleteACourse = (req, res) => {
     const query = `DELETE FROM courses WHERE course_id = '${req.params.id}';`;
     
 	db.query(query, (err, data) => {
-        if (err) return res.status(500).json(err);
+        if (err) return res.status(500).json({ error: "Can't delete a course which is already ongoing. Wait for the smemester to end!" });
 
 		return res.status(204).json(data);
     });
