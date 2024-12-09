@@ -49,11 +49,14 @@ export const deleteAStudent = (req, res) => {
 	const query = `DELETE FROM students WHERE student_id = '${req.params.id}';`;
 
 	db.query(query, (err, data) => {
-		if (err) return res.status(500).json(err);
-
-		return res.status(204).json(data);
+		if (err) {
+			return res.status(500).json({ error: "Can't delete a student who is already registered" });
+		}
+		
+		return res.status(204).send();
 	});
 };
+
 
 //==============================================================
 //Updates datas of a student
